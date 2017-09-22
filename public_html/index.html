@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src ="validationScript.js" async></script>
+    </head>
+    <body>
+        <form id="myForm" style="width: 500px; padding-left: 300px">
+            <fieldset>
+                <legend>Registration Form</legend>
+
+
+                First Name: <input  type="text"  id ='firstName'  onblur="if (this.value == '') {
+                            document.getElementById('firstNameErr').innerHTML = 'Enter your first name'; }"
+                            onfocus=" if (this.length != 0) {  document.getElementById('firstNameErr').innerHTML = ''; }" >
+                <p style="color: red" id = "firstNameErr"></p>
+
+                Last Name: <input type="text" id ='lastName'  onblur="if (this.value == '') {
+                            document.getElementById('lastNameErr').innerHTML = 'Enter your last name'; }"
+                            onfocus=" if (this.length != 0) {  document.getElementById('lastNameErr').innerHTML = ''; }" >
+                
+                                <p style="color: red" id = "lastNameErr"></p>
+                User Name:  <input type="text" id ='userName' onblur="if (this.value == '') {
+                            document.getElementById('userNameErr').innerHTML = 'Enter your user name'; }"
+                            onfocus=" if (this.length != 0) {  document.getElementById('userNameErr').innerHTML = ''; }" >
+                        <p style="color: red" id = "userNameErr"></p>
+                Password:    <input  type="password"  id ='password' onblur="if (this.value == '') {
+                            document.getElementById('passwordErr').innerHTML = 'Enter your password'; }"
+                            onfocus=" if (this.length != 0) {  document.getElementById('passwordErr').innerHTML = ''; }" > 
+                <p style="color: red" id = "passwordErr"></p>
+                Email : <input  type="text"  id ='email' onblur="if (this.value == '') {
+                            document.getElementById('emailErr').innerHTML = 'Enter your email '; }"
+                            onfocus=" if (this.length != 0) {  document.getElementById('emailErr').innerHTML = ''; }" > 
+                                 <p style="color: red" id = "emailErr"></p>
+                Gender 
+                <input type="radio" name="Gender"  value="1" id = 'male'/> Male
+                <input type="radio" name="Gender"  value="2" id = 'female'/> Female
+                <p style="color: red" id = "genderErr"></p>
+                
+                <button type="button" onclick="Validate()">Register me </button>
+
+            </fieldset>
+        </form>
+        <button onclick="displayTable()"> Read Data</button>
+
+        <div id ="display"></div>
+
+
+
+
+
+
+    </body>
+</html>
